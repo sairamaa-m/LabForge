@@ -8,7 +8,7 @@ import Button from "../components/ui/Button";
 
 function Stimulus({node}:{node:ExperimentNode}){
   const c=node.config;
-  const pos=(c.position??{}) as Record<string,unknown>, size=(c.size??{}) as Record<string,unknown>;
+  const size=(c.size??{}) as Record<string,unknown>;
   if(node.type==="shape"){
     return <div style={{width:Number(size.width??160),height:Number(size.height??160),background:String(c.fill??"#ef4444"),border:`${Number(c.borderWidth??0)}px solid ${String(c.borderColor??"#111827")}`,borderRadius:c.shape==="circle"?"9999px":"8px",opacity:Number(c.opacity??1),transform:`rotate(${Number(c.rotation??0)}deg)`}} />;
   }
