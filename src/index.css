@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-paper text-ink font-sans;
+  }
+  :focus-visible {
+    outline: 2px solid #3454d1;
+    outline-offset: 2px;
+  }
+}
+
+/* React Flow overrides to match the ExperimentLab visual language */
+.xlab-flow .react-flow__attribution {
+  display: none;
+}
+.xlab-flow .react-flow__controls {
+  box-shadow: 0 1px 2px rgba(20, 22, 26, 0.08);
+  border: 1px solid #e3e1da;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.xlab-flow .react-flow__controls-button {
+  border-bottom: 1px solid #e3e1da;
+  background: #fff;
+}
+.xlab-flow .react-flow__minimap {
+  border: 1px solid #e3e1da;
+  border-radius: 8px;
+}
+.xlab-flow .react-flow__edge-path {
+  stroke: #b9b6ac;
+  stroke-width: 1.5;
+}
+.xlab-flow .react-flow__edge.selected .react-flow__edge-path {
+  stroke: #3454d1;
+}
+.xlab-flow .react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background: #14161a;
+  border: 2px solid #fafaf8;
+}
